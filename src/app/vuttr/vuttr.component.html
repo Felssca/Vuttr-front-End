@@ -1,0 +1,43 @@
+<div class="jumbotron">
+<div class="container">
+  <form [formGroup]="vuttrFormSearch" (ngSubmit)="searchVuttrKeyWord()">
+  <div class="row row-cols-4">
+    <div class="col-sm">
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">  
+          <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
+        </div>
+        
+        <input type="text" forControlName="searchKey" class="form-control" aria-label="Sizing example input" 
+        aria-describedby="inputGroup-sizing-sm">
+      </div>
+    </div>
+      <div class="col-sm">
+        <button type="submit"  id="btn-mensagem" class="form-control  btn btn-light btn-sm">Search</button>
+      </div>
+    <div class="col-sm">
+      <input type="checkbox" formControlName="searchKeyTag" checked=true aria-label="Checkbox for following text input"> Search in tags only
+    </div>
+    <div class="col-sm">
+      <button type="button"  id="btn-mensagem" class="btn btn-light" data-toggle="modal" data-target="#addNewTool">+add</button>
+    </div>
+  </div>
+  <div class="card m-3" *ngFor = "let vuttr of vuttrModelList">
+    <div class="card-header">
+      <div class="row">
+        <div class="col-sm">
+          <a href="{{vuttr.link}}">{{vuttr.title}}</a>
+    </div><div class="col-sm"></div>
+    <div class="col-sm"><button class="btn btn-light" (click)="deleteVuttr(vuttr)"> X remove</button></div>
+      </div>
+    </div>
+    <div class="card-body" >
+      <h5 class="card-title">{{vuttr.link}}</h5>
+      <p class="card-text">{{vuttr.description}}</p>
+      <div *ngFor = "let t of vuttr.vuttrTagsModel ">{{t.tags}}</div>
+    </div>
+
+  </div>
+</form>
+</div>
+
