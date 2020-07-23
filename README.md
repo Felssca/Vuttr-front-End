@@ -1,4 +1,19 @@
 # VuttrFront
+Vuttr front foi desenvolvido para se comunicar com Vuttr Back utilizando serviços que interagem com a  API REST (Back-End)
+#Tecnologias utilizadas:</br>
+[x]Angular 9 </br>
+Javastcript</br>
+Html</br>
+Css</br>
+TypeScript</br>
+[x]NodJs</br>
+[x]Npm</br>
+[x]Bootstrap</br>
+[X]Responsive</br> 
+[x] ReactiveForms</br>
+IDE:</br>
+[x]Visual Studio Code v 1.47.2</br>
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
 
